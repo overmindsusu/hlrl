@@ -1,0 +1,5 @@
+<!--pages/candidate/candidate.wxml-->
+<text>pages/candidate/candidate.wxml</text>
+<import src="/tabbar.wxml"/> 
+ <template is="tabBar" data="{{tabBar}}"/>
+

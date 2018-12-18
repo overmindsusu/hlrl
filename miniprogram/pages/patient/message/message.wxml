@@ -1,0 +1,7 @@
+<!--pages/patient/message/message.wxml-->
+<!--引入tabbar-->
+<import src="/tabbar.wxml"/> 
+<view class='tabbar'><template is="tabBar" data="{{tabBar}}"/></view>
+<text>pages/patient/message/message.wxml</text>
+
+

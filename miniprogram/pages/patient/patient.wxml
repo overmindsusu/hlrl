@@ -1,0 +1,38 @@
+<!--pages/patient/patient.wxml-->
+
+
+
+<!--搜索栏-->
+<view style='border:solid 3px;height:50px;margin-bottom:40rpx'>
+<picker range="{{list}}" value="{{selectedIndex}}" bindchange="change">
+ <view class="picker" >
+ <text style='position:relative;bottom:10px;size:1px;color:red'>
+ {{list[selectedIndex]}}
+ </text>
+  </view>
+</picker>
+</view>
+
+<!--显示患者列表-->
+ <view  wx:for="{{patient_detail}}" wx:key="" >
+  <view wx:if="{{item.PSex==1}}" class='patient_male'  bindtap='patient' data-p_id='{{item._id}}' >
+   <text> {{item.PName}}  
+    {{item.PID}}
+    方案
+   </text>
+  </view>
+  <view wx:else="{{item.PSex==0}}" class='patient_female' bindtap='patient' data-p_id='{{item._id}}'>
+   <text> {{item.PName}}  
+    {{item.PID}}
+    方案
+   </text>
+  </view>
+ </view>
+
+<!--引入tabbar-->
+<import src="/tabbar.wxml"/> 
+<view class='tabbar'><template is="tabBar" data="{{tabBar}}"/></view>
+
+
+
+ 

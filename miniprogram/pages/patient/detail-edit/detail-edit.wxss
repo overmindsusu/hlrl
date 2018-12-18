@@ -1,0 +1,19 @@
+/* detail.wxss */
+.section{
+  font-size: 15px;padding: 10px;border-bottom: solid #ccc 1px;
+}
+
+.section input{border: solid silver 1px; border-radius: 4px;height: 40px;margin-top: 5px}
+
+.section label{margin-right: 20px}
+
+
+.section textarea{
+  border: solid 1px #ccc;border-radius: 4px;
+  padding: 5px; background-color: #fff;height: 100px;width: 350px
+}
+
+.section .textarea-holder{
+color: red
+}
+

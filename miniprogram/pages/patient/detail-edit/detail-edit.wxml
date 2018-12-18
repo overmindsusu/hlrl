@@ -1,0 +1,60 @@
+<!--detail.wxml-->
+<form bindsubmit='comfirm' >
+ <view class='section'>
+ <text>姓名：</text>
+ <input name="PName" placeholder="{{pname}}" 
+ data-value='{{PName}}' value='{{pname}}'></input>
+ </view>
+
+ <view class='section'>
+  性别：
+  <radio-group name="sexchoose" data-psex='{{PSex}}'>
+   <label>
+    <radio wx:if="{{psex==1}}" checked="{{true}}" value='{{1}}'>男</radio>
+   </label>
+   <label style='float:right'>
+    <radio wx: else checked="{{true}}" value='{{0}}'>女</radio>
+   </label>
+  </radio-group>
+ </view>
+
+ <view class='section'>
+  身份证号：
+  <input style='display:none' data-value='{{id}}'  name="id" value='{{pid}}'></input>
+  <input name="PID" data-value='{{PID}}' value='{{pid}}' placeholder=''></input>
+ </view>
+
+ <view class='section'>
+  <text>医生：XXX</text>
+ </view>
+
+ <view class='section'>
+  <text>身高：(cm)</text>
+  <input name="pheight"   placeholder='{{pheight}}'
+  value='{{pheight}}' bindinput="heightInput" ></input>
+  
+ </view>
+
+ <view class='section'>
+  <text>体重：(kg)</text>
+  <input name="pweight"  placeholder='输入体重'
+  value='{{pweight}}' bindinput="weightInput"></input>
+  
+ </view>
+ 
+ <view class='section' data-ps='{{pbsa}}'>
+  <text>体表面积((身高(cm) x 体重(kg)/ 3600 )½)：{{pbsa}}</text>
+ </view>
+
+ <view class='section'>
+  <text>病历</text>
+  <textarea bindblur='getValue' placeholder='输入病历' placeholder-class='textarea-holder'></textarea>
+ </view>
+
+ <view class='section'>
+  <!-- <navigator url='/pages/detail/detail'> -->
+  <button  class='comfirm'  bindtap='comfirm'>提交</button>
+  <!-- </navigator>-->
+  <button   form-type='reset'>重置</button>
+ </view>
+</form>

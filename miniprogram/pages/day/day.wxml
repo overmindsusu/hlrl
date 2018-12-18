@@ -1,0 +1,47 @@
+<!--pages/day/day.wxml-->
+<view>{{time}}</view>  
+
+
+<view class='section'>
+<button style='float:right  ' bindtap="Day" >日</button>
+
+<button style='float:right' bindtap="Week" >周</button>
+
+
+<button style='float:right' bindtap="Mon" >月</button>
+
+ </view>
+<view class='section'>
+<text>\n\n\n</text>
+ </view>
+
+<view class="section-date">  
+  <picker mode="date" value="{{date}}" start="1978-01-01" end="2099-1-23" bindchange="bindDateChange">  
+    <view class="picker">  
+      日期: {{dates}}  
+    </view>  
+  </picker>  
+  
+</view>  
+
+
+<view style='border:solid 3px;height:800px;'>
+ 
+
+
+
+
+
+  <view class='mwd-data' wx:if="{{mwd}}">
+  <block wx:for="{{mwd}}" wx:key="item.pname">
+
+ <view> 
+ <text>
+  {{mwd.pname}}
+  {{item.plan}}
+   已上传报告
+ </text>
+ </view>
+ </block>
+</view>
+</view>

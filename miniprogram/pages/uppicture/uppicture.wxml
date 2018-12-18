@@ -1,0 +1,21 @@
+<!--pages/uppicture/uppicture.wxml-->
+  <view class="list">
+   
+    <view class="uploader-text" bindtap="doUpload">
+      <text>上传图片</text>
+    </view>
+    
+    <view class="uploader-text" bindtap=""><!--？？？？？-->
+      <text>删除图片</text>
+    </view>
+
+    <view class="list-item">
+      <text class="request-text">文件 ID：{{fileID}}</text>
+    </view>
+    <view class="list-item">
+      <text class="request-text">云文件路径：{{cloudPath}}</text>
+    </view>
+    <view class="list-item">
+      <image bindtap='img'  data-src="{{imagePath}}" src="{{imagePath}}" mode="aspectFit"></image>
+    </view>
+  </view>

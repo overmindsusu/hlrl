@@ -1,0 +1,50 @@
+<!--detail.wxml-->
+<!--引入tabbar-->
+<import src="/tabbar.wxml"/> 
+<view class='tabbar'><template is="tabBar" data="{{tabBar}}"/></view>
+
+
+ <view class='section' style='border-top:solid 1px #ccc'  >
+ <text>姓名：{{patient_detail.PName}}</text>
+ </view>
+
+ <view class='section' >
+  性别：
+   <label wx:if="{{patient_detail.PSex==1}}" >男</label>
+   <label wx:else="{{patient_detail.PSex==0}}" >女</label>
+ </view>
+
+ <view class='section' >
+  身份证号：{{patient_detail.PID}}
+ </view>
+
+ <view class='section'>
+  <text>医生：XXX</text>
+ </view>
+
+ <view class='section' >
+  <text>身高(cm)：{{patient_detail.PHeight}}</text>
+ </view>
+
+ <view class='section'>
+  <text>体重(kg)：{{patient_detail.PWeight}}</text>
+ </view>
+ 
+ <view class='section'>
+  <text>体表面积：{{patient_detail.PS}}</text>
+ </view>
+
+ <view class='section'>
+  <text>病历</text>
+  <scroll-view style='height:100px'>
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  xxxxxxxxxxxxxxxxxxxxxxxxx
+  </scroll-view>
+ </view>
+
+
+ <view class='section'>
+  <button type='primary' form-type='submit' bindtap='edit'>编辑</button>
+ </view>
+

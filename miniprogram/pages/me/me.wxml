@@ -1,0 +1,8 @@
+<!--pages/me/me.wxml-->
+<text>pages/me/me.wxml</text>
+<import src="/tabbar.wxml"/> 
+ <template is="tabBar" data="{{tabBar}}"/>
+
+<!--引入tabbar-->
+<import src="/tabbar.wxml"/> 
+<view class='tabbar'><template is="tabBar" data="{{tabBar}}"/></view>

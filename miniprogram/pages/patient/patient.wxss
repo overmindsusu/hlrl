@@ -1,0 +1,8 @@
+/* pages/patient/patient.wxss */
+.picker{background-color:white;float:right;width:120px;height:48px;border:solid 1px steelblue}
+.patient-data{border: solid silver 3px;padding: 10px;padding-top:0px}
+
+/*患者显示*/
+.patient_male{font-size: 20px;padding: 15px;border-top: solid #ccc 1px;margin-bottom: 10px;background:rgba(0, 141, 235, 0.301)}
+.patient_female{font-size: 20px;padding: 15px;border-top: solid #ccc 1px;margin-bottom: 10px;
+background:rgba(255, 23, 197, 0.158)}
